@@ -76,7 +76,7 @@ void TestStrToLower_EmptyString ( CuTest *tc )
 	CuAssertStrEquals ( tc, expected, actual );
 }
 
-CuSuite* StrUtilGetSuite ()
+CuSuite* StringUtilitiesGetSuite ()
 {
 	CuSuite* suite = CuSuiteNew ();
 

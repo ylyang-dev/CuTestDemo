@@ -3,15 +3,17 @@
 #include "CuTest.h"
 
 
-CuSuite*	StrUtilGetSuite ();
+CuSuite*	MathUtilitiesGetSuite ();
+CuSuite*	StringUtilitiesGetSuite ();
 
 
 void RunAllTests ( void )
 {
-	CuString *output = CuStringNew ();
-	CuSuite* suite = CuSuiteNew ();
+	CuString*	output = CuStringNew ();
+	CuSuite*	suite = CuSuiteNew ();
 
-	CuSuiteAddSuite ( suite, StrUtilGetSuite () );
+	CuSuiteAddSuite ( suite, MathUtilitiesGetSuite () );
+	CuSuiteAddSuite ( suite, StringUtilitiesGetSuite () );
 
 	CuSuiteRun ( suite );
 	CuSuiteSummary ( suite, output );
